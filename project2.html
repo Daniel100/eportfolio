@@ -68,21 +68,10 @@
 										<h2>COURSE CONTENT</h2>
 									</header>
 
-									My xyz projects are publicly available on GitHub: <a href="https://github.com/Daniel100/Deciphering-Big-Data">Deciphering Big Data - Projects</a>.
+									My projects are publicly available on GitHub: <a href="https://github.com/Daniel100/Deciphering-Big-Data">Deciphering Big Data - Projects</a>.
 									<p>
-										
-										<li>Web Scraping: <a href="https://github.com/Daniel100/Deciphering-Big-Data/blob/main/web_scraping_gdp.ipynb">Gross Domestic Product</a></li>
-										<li>Unit 2: todo text</li>
-										<li>Unit 3: todo text</li>
-										<li>Unit 4: todo text</li>
-										<li>Unit 5: todo text</li>
-										<li>Unit 6: todo text</li>
-										<li>Unit 7: todo text</li>
-										<li>Unit 8: todo text</li>
-										<li>Unit 9: todo text</li>
-										<li>Unit 10: todo text</li>
-										<li>Unit 11: todo text</li>
-										<li>Unit 12: todo text</li>
+										<li> Collaborative Discussion </li>
+										<li> Team Report</li>
 
 									</p>
 								</div>
@@ -166,20 +155,65 @@
 								<section id="two">
 									<div class="inner">
 										<header class="major">
-											<h2>section b</h2>
+											<h2>Team Project</h2>
 										</header>
 										<p>
-											Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa vel lacinia pellentesque lorem ipsum dolor. 
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
-											Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna.
+											Project Team: Group 2 <p/>
 										</p>
+
+										<header class="major">
+											<h4>INTRODUCTION</h4>
+										</header>
+										<p>
+											Our client, a successful barbershop located in the UK, requires measurement of the shop’s turnover to plan the budget, manage taxes and human resources. Furthermore, employee performance needs to be evaluated regularly since it is crucial for the clients success.
+										</p>
+
+										
+										<header class="major">
+											<h4>CURRENT SITUATION</h4>
+										</header>
+										<p>
+											Currently, our client performs the time-consuming task of manually arranging, processing, and storing data in spreadsheets to create reports daily. This data comes from four separate sources: cash registers, customers, employees, and service. The system’s weakness lies in the disconnected data sources and the manual process.
+										</p>
+
+										<header class="major">
+											<h4>DATA PROCESS ARCHITECTURE</h4>
+										</header>
+										<p>
+											<p> To tackle the lack of integration and manual process, the most beneficial solution is a fully automated and optimised cloud platform. This will enable the client to focus on other core areas whilst still generating reports and insights vital to the running of the business.</p>
+											<p> Our solution starts with setting up an e-commerce web application service for handling transactions, customer data, and services; it will be the single point of truth for raw data. </p>
+											<p> The next step is to set up a GCP account with BigQuery (free tier) because this will suit the small volume of data the client will be storing and processing. It is also equipped with top-tier security measures, managed directly by Google. </p>
+											<p> After the GCP account is created, data loads through an API from the e-commerce web application to the GCP. </p>
+											<p> Whilst the technical preconditions are now established, our data would still be considered raw data. Thus, a data pipeline must be implemented for transforming and cleaning the data. </p>
+											<p> The software service, DBT, will be used for the data engineering workflow - creating the ETL for these tasks. Furthermore, this tool has version control, documentation, and a testing framework which we will utilise to develop a reliable data pipeline resulting in a DWH. </p>
+											<p> Since data quality is crucial, we will implement a data testing strategy to detect inconsistencies such as outliers and formatting errors. Additionally, we will create user profiles for all used services to guarantee safe access management. </p>
+											<p> After this, the data is considered clean; automated queries will be created to gather the data. The data will be available via Google Sheets and guarantee our client a flexible way to analyse the data. </p>
+											<p> The graphical description of the data process can be found <a href="https://github.com/Daniel100/Deciphering-Big-Data/blob/main/team_project_hair_dresser_solution.png"> here </a> . </p>
+											<p> The pipeline overview can be fount <a href="https://github.com/Daniel100/Deciphering-Big-Data/blob/main/team_prject_hair_dresser_architecture.png"> here  </a> .  </p>
+										</p>
+
+										<header class="major">
+											<h4>PIPELINE DESCRIPTION</h4>
+										</header>
+										<p>
+											Can be found <a href="https://github.com/Daniel100/Deciphering-Big-Data/blob/main/Project%20Report.pdf">here</a>, see page 4. 
+										</p>
+
+										<header class="major">
+											<h4>LOGICAL DATABASE</h4>
+										</header>
+										<p>
+											Can be found <a href="https://github.com/Daniel100/Deciphering-Big-Data/blob/main/Project%20Report.pdf">here</a>, see page 5-6. 
+										</p>
+
+										<header class="major">
+											<h4>REFERENCES</h4>
+										</header>
+										<p> Handy, T. and Lantz, J. (2017) What, exactly, is DBT?, Transform data in your warehouse. Available at: https://www.getdbt.com/blog/what-exactly-is-dbt/ (Accessed: February 18, 2023). </p>
+										<p> Kimball, R. & Ross, M. (2013) The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling. 3rd ed. Indiana: John Wiley & Sons Inc. </p>
+										<p> HCL, T. L. (2022) MONEY(p,s) data type. Available from: https://www.ibm.com/docs/en/informix-servers/14.10?topic=types-moneyps-data-type [Accessed: February 19, 2023]. </p>
+										<p> TechTarget, C. (2012) DEFINITION - fact table. Available from: https://www.techtarget.com/searchdatamanagement/definition/fact-table [Accessed: February 19, 2023]. </p>
+
 									</div>
 								</section>
 
